@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="62Q-f6-cEb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--title-->
+        <scene sceneID="3NJ-z2-TUP">
+            <objects>
+                <viewController id="S61-5N-bRs" customClass="OAuthController" customModule="SinaWeibo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tVq-CF-U2K"/>
+                        <viewControllerLayoutGuide type="bottom" id="xdg-67-1wq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nb7-eA-lVC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWu-la-Rge">
+                                <rect key="frame" x="0.0" y="4" width="600" height="596"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aWu-la-Rge" firstAttribute="top" secondItem="tVq-CF-U2K" secondAttribute="bottom" constant="-60" id="RS9-W4-cib"/>
+                            <constraint firstItem="aWu-la-Rge" firstAttribute="leading" secondItem="Nb7-eA-lVC" secondAttribute="leading" id="WSo-Vo-yvK"/>
+                            <constraint firstAttribute="trailing" secondItem="aWu-la-Rge" secondAttribute="trailing" id="ixb-kj-Eve"/>
+                            <constraint firstItem="xdg-67-1wq" firstAttribute="top" secondItem="aWu-la-Rge" secondAttribute="bottom" id="x0m-2r-yWK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="title" id="zOh-Gn-lJu">
+                        <barButtonItem key="leftBarButtonItem" title="关闭" id="UAK-Es-sZl">
+                            <connections>
+                                <action selector="close:" destination="S61-5N-bRs" id="OK4-1b-aNw"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="自动填充" id="BSb-9h-ynl">
+                            <connections>
+                                <action selector="defaultAccount:" destination="S61-5N-bRs" id="9rH-5z-jq2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="aWu-la-Rge" id="kCj-96-CxO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DFf-KP-tFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="925" y="204"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W6t-mV-ZJj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="62Q-f6-cEb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kf7-R5-yaN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="S61-5N-bRs" kind="relationship" relationship="rootViewController" id="aMK-US-2hB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ZZ-W6-epl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="204"/>
+        </scene>
+    </scenes>
+</document>

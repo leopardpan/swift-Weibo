@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YGZ-Uk-0fL">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome Controller-->
+        <scene sceneID="v4i-3s-BBz">
+            <objects>
+                <viewController id="YGZ-Uk-0fL" customClass="WelcomeController" customModule="SinaWeibo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zR4-ro-jz2"/>
+                        <viewControllerLayoutGuide type="bottom" id="Et6-Xi-qOT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rHY-hg-H3k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad_background" translatesAutoresizingMaskIntoConstraints="NO" id="ntu-mk-pFq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎归来" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jub-D0-8Ea">
+                                <rect key="frame" x="146" y="471.5" width="84" height="25.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="avatar_default_big" translatesAutoresizingMaskIntoConstraints="NO" id="Bxb-Ee-0um">
+                                <rect key="frame" x="142" y="357" width="90" height="90"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="5qq-A3-aw2"/>
+                                    <constraint firstAttribute="width" constant="90" id="NnR-C8-OBA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bxb-Ee-0um" firstAttribute="centerX" secondItem="rHY-hg-H3k" secondAttribute="centerX" id="EkE-tH-xkh"/>
+                            <constraint firstItem="Et6-Xi-qOT" firstAttribute="top" secondItem="ntu-mk-pFq" secondAttribute="bottom" id="PAO-Ql-r1H"/>
+                            <constraint firstItem="ntu-mk-pFq" firstAttribute="top" secondItem="rHY-hg-H3k" secondAttribute="top" id="eqd-Dm-q7N"/>
+                            <constraint firstItem="Et6-Xi-qOT" firstAttribute="top" secondItem="Bxb-Ee-0um" secondAttribute="bottom" constant="220" id="kv0-gi-Ecg"/>
+                            <constraint firstItem="ntu-mk-pFq" firstAttribute="leading" secondItem="rHY-hg-H3k" secondAttribute="leading" id="pqj-Hq-ei9"/>
+                            <constraint firstAttribute="trailing" secondItem="ntu-mk-pFq" secondAttribute="trailing" id="qcc-yo-f9F"/>
+                            <constraint firstItem="Et6-Xi-qOT" firstAttribute="top" secondItem="jub-D0-8Ea" secondAttribute="bottom" constant="170" id="vmb-aC-9jC"/>
+                            <constraint firstItem="jub-D0-8Ea" firstAttribute="centerX" secondItem="rHY-hg-H3k" secondAttribute="centerX" id="ykK-fV-utT"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="iconImage" destination="Bxb-Ee-0um" id="KQ9-2q-nhW"/>
+                        <outlet property="iconImageBottom" destination="kv0-gi-Ecg" id="Hgy-cD-8iv"/>
+                        <outlet property="welcomeLabel" destination="jub-D0-8Ea" id="X0i-5E-AtC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5V0-OO-NVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="552.5" y="-84.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ad_background" width="250" height="444"/>
+        <image name="avatar_default_big" width="85" height="85"/>
+    </resources>
+</document>
