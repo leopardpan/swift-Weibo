@@ -138,11 +138,8 @@ class OAuthController: UIViewController ,UIWebViewDelegate{
     
     @IBAction func defaultAccount(sender: AnyObject) {
         
-        let strJS = "document.getElementById('userId').value = '1079108859@qq.com';document.getElementById('passwd').value = '19920501.' "
+        let strJS = "document.getElementById('userId').value = '18410108660';document.getElementById('passwd').value = 'qwertyuiop' "
         
-//        let strJS = "document.getElementById('userId').value = 'jh235@qq.com';document.getElementById('passwd').value = '19920501.' "
-        
-//        let strJS = "document.getElementById('userId').value = '15510905510';document.getElementById('passwd').value = 'guo791175282' "
         
         webView.stringByEvaluatingJavaScriptFromString(strJS)
         
